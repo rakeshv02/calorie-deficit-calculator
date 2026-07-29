@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calorie Deficit Calculator — How Many Calories to Lose Weight | Tabutility</title>
+  <meta name="description" content="Calculate your daily calorie deficit to lose weight. Enter your details and target weight loss per week to see exactly how many calories to eat per day. Free calorie deficit calculator."/>
+  <link rel="canonical" href="https://calorie-deficit-calculator.tabutility.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://calorie-deficit-calculator.tabutility.com/"/>
+  <meta property="og:title" content="Calorie Deficit Calculator — How Many Calories to Lose Weight"/>
+  <meta property="og:description" content="Calculate your daily calorie deficit to lose weight. See exactly how many calories to eat per day."/>
+  <meta property="og:site_name" content="Tabutility"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>"/>
+  <meta name="theme-color" content="#1a1a2e"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Deficit Calculator","url":"https://calorie-deficit-calculator.tabutility.com/","description":"Calculate your daily calorie deficit to lose weight. See exactly how many calories to eat per day.","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a calorie deficit?","acceptedAnswer":{"@type":"Answer","text":"A calorie deficit is when you consume fewer calories than your body burns. Your body then uses stored fat for energy, causing weight loss."}},{"@type":"Question","name":"How many calories should I cut to lose 1lb per week?","acceptedAnswer":{"@type":"Answer","text":"To lose 1 pound (0.45kg) per week you need a total deficit of approximately 3,500 calories, which means eating about 500 fewer calories per day than you burn."}},{"@type":"Question","name":"Is it safe to cut more than 1,000 calories per day?","acceptedAnswer":{"@type":"Answer","text":"Most nutrition experts recommend a maximum deficit of 500–1,000 calories per day. Larger deficits can cause muscle loss, nutrient deficiencies and are hard to sustain."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+    a{color:#4f46e5;text-decoration:none}
+    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-brand{color:#fff;font-size:18px;font-weight:800}
+    .nav-links a{color:rgba(255,255,255,0.8);font-size:14px;margin-left:20px;font-weight:500}
+    .hero{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:40px 20px 32px;text-align:center}
+    .hero h1{font-size:clamp(24px,4vw,38px);font-weight:900;margin:0 0 10px}
+    .hero p{color:rgba(255,255,255,0.75);margin:0;font-size:16px}
+    .wrap{max-width:700px;margin:0 auto;padding:32px 20px 60px}
+    .card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;border:1.5px solid #e8ecf2}
+    .card h2{font-size:18px;font-weight:800;margin:0 0 20px}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:520px){.row2{grid-template-columns:1fr}}
+    label{display:block;font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.4px}
+    input[type=number],select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:16px;font-weight:600;color:#1e293b;background:#f8fafc;outline:none;transition:border 0.2s;margin-bottom:16px}
+    input:focus,select:focus{border-color:#4f46e5;background:#fff}
+    .toggle-row{display:flex;gap:8px;margin-bottom:16px}
+    .toggle-btn{flex:1;padding:9px;border:2px solid #e2e8f0;border-radius:10px;background:#fff;cursor:pointer;font-size:14px;font-weight:600;color:#64748b;transition:all 0.15s}
+    .toggle-btn.active{border-color:#10b981;background:#10b981;color:#fff}
+    .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px}
+    .res-box{border-radius:14px;padding:20px;text-align:center;color:#fff}
+    .res-box.green{background:linear-gradient(135deg,#10b981,#059669)}
+    .res-box.blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
+    .res-box.orange{background:linear-gradient(135deg,#f59e0b,#d97706)}
+    .res-box.purple{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
+    .res-num{font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1}
+    .res-label{font-size:12px;font-weight:600;opacity:0.85;margin-top:4px}
+    .detail-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:15px}
+    .detail-row:last-child{border-bottom:none}
+    .warning{background:#fef3c7;border-left:4px solid #f59e0b;border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:#92400e;margin-top:8px;display:none}
+    .ad-wrap{margin:20px 0;text-align:center;min-height:90px;background:#f8fafc;border-radius:8px}
+    footer{background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:24px 20px;font-size:14px}
+    footer a{color:#818cf8}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
+  <div class="nav-links">
+    <a href="https://tabutility.com">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
+</nav>
+<div class="hero">
+  <h1>🥗 Calorie Deficit Calculator</h1>
+  <p>Find out exactly how many calories to eat per day to reach your goal weight</p>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>Your Details</h2>
+    <div class="toggle-row">
+      <button class="toggle-btn active" onclick="setUnit('metric',this)" id="btn-metric">Metric (kg/cm)</button>
+      <button class="toggle-btn" onclick="setUnit('imperial',this)" id="btn-imperial">Imperial (lbs/ft)</button>
+    </div>
+    <div class="row2">
+      <div>
+        <label>Age</label>
+        <input type="number" id="age" placeholder="30" min="15" max="100" value="30" oninput="calc()"/>
+      </div>
+      <div>
+        <label>Sex</label>
+        <select id="sex" onchange="calc()">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2" id="metric-fields">
+      <div>
+        <label>Height (cm)</label>
+        <input type="number" id="height-cm" placeholder="175" min="100" max="250" value="175" oninput="calc()"/>
+      </div>
+      <div>
+        <label>Current Weight (kg)</label>
+        <input type="number" id="weight-kg" placeholder="80" min="30" max="300" value="80" oninput="calc()"/>
+      </div>
+    </div>
+    <div class="row2" id="imperial-fields" style="display:none">
+      <div>
+        <label>Height (inches)</label>
+        <input type="number" id="height-in" placeholder="69" min="48" max="96" value="69" oninput="calc()"/>
+      </div>
+      <div>
+        <label>Current Weight (lbs)</label>
+        <input type="number" id="weight-lbs" placeholder="176" min="66" max="660" value="176" oninput="calc()"/>
+      </div>
+    </div>
+    <label>Activity Level</label>
+    <select id="activity" onchange="calc()">
+      <option value="1.2">Sedentary (desk job, little exercise)</option>
+      <option value="1.375">Lightly active (1–3 days/week)</option>
+      <option value="1.55" selected>Moderately active (3–5 days/week)</option>
+      <option value="1.725">Very active (6–7 days/week)</option>
+      <option value="1.9">Extra active (physical job + daily exercise)</option>
+    </select>
+    <label>Target Weight Loss per Week</label>
+    <div class="toggle-row" id="goal-btns">
+      <button class="toggle-btn" onclick="setGoal(0.25,this)">0.25 kg</button>
+      <button class="toggle-btn active" onclick="setGoal(0.5,this)">0.5 kg</button>
+      <button class="toggle-btn" onclick="setGoal(0.75,this)">0.75 kg</button>
+      <button class="toggle-btn" onclick="setGoal(1,this)">1 kg</button>
+    </div>
+  </div>
+
+  <div class="card" id="result-card" style="display:none">
+    <h2>Your Calorie Plan</h2>
+    <div class="result-grid">
+      <div class="res-box blue"><div class="res-num" id="r-tdee">—</div><div class="res-label">Maintenance calories/day</div></div>
+      <div class="res-box green"><div class="res-num" id="r-target">—</div><div class="res-label">Target calories/day</div></div>
+      <div class="res-box orange"><div class="res-num" id="r-deficit">—</div><div class="res-label">Daily deficit</div></div>
+      <div class="res-box purple"><div class="res-num" id="r-weeks">—</div><div class="res-label">Weeks to lose 5 kg</div></div>
+    </div>
+    <div class="detail-row"><span>BMR (base metabolic rate)</span><span id="d-bmr">—</span></div>
+    <div class="detail-row"><span>Maintenance (TDEE)</span><span id="d-tdee">—</span></div>
+    <div class="detail-row"><span>Daily calorie target</span><span id="d-target">—</span></div>
+    <div class="detail-row"><span>Weekly deficit</span><span id="d-weekly">—</span></div>
+    <div class="warning" id="warn">⚠️ A deficit above 1,000 cal/day is not recommended. Consider a more gradual approach to preserve muscle and ensure you get adequate nutrition.</div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card">
+    <h2>How does a calorie deficit work?</h2>
+    <p style="font-size:15px;color:#475569;margin:0">To lose weight, you need to consume fewer calories than you burn. Your TDEE (Total Daily Energy Expenditure) is how many calories your body burns at rest plus activity. Eating below your TDEE creates a deficit. Roughly 7,700 calories = 1 kg of fat. A 500 cal/day deficit = about 0.5 kg/week weight loss.</p>
+    <p style="font-size:13px;color:#94a3b8;margin:12px 0 0">This tool uses the Mifflin-St Jeor equation, considered the most accurate for most adults.</p>
+  </div>
+</div>
+<footer>
+  <p>© 2025 <a href="https://tabutility.com">Tabutility</a> — Free Online Tools</p>
+</footer>
+<script>
+  let unit='metric', goal=0.5;
+
+  function setUnit(u,el){
+    unit=u;
+    document.querySelectorAll('.toggle-btn').forEach((b,i)=>{if(i<2)b.classList.remove('active')});
+    el.classList.add('active');
+    document.getElementById('metric-fields').style.display=u==='metric'?'grid':'none';
+    document.getElementById('imperial-fields').style.display=u==='imperial'?'grid':'none';
+    calc();
+  }
+  function setGoal(g,el){
+    goal=g;
+    el.parentNode.querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));
+    el.classList.add('active');
+    calc();
+  }
+
+  function calc(){
+    const age=parseInt(document.getElementById('age').value)||30;
+    const sex=document.getElementById('sex').value;
+    const act=parseFloat(document.getElementById('activity').value)||1.55;
+    let weightKg, heightCm;
+    if(unit==='metric'){
+      weightKg=parseFloat(document.getElementById('weight-kg').value)||80;
+      heightCm=parseFloat(document.getElementById('height-cm').value)||175;
+    } else {
+      weightKg=(parseFloat(document.getElementById('weight-lbs').value)||176)*0.453592;
+      heightCm=(parseFloat(document.getElementById('height-in').value)||69)*2.54;
+    }
+
+    // Mifflin-St Jeor
+    let bmr;
+    if(sex==='male') bmr=10*weightKg+6.25*heightCm-5*age+5;
+    else bmr=10*weightKg+6.25*heightCm-5*age-161;
+
+    const tdee=Math.round(bmr*act);
+    const dailyDeficit=Math.round(goal*7700/7); // 7700 kcal ≈ 1kg fat
+    const target=Math.max(1200,tdee-dailyDeficit);
+    const actualDeficit=tdee-target;
+    const weeksTo5kg=Math.round((5*7700)/actualDeficit/7);
+
+    document.getElementById('r-tdee').textContent=tdee.toLocaleString();
+    document.getElementById('r-target').textContent=target.toLocaleString();
+    document.getElementById('r-deficit').textContent=actualDeficit.toLocaleString();
+    document.getElementById('r-weeks').textContent=weeksTo5kg;
+    document.getElementById('d-bmr').textContent=Math.round(bmr).toLocaleString()+' cal';
+    document.getElementById('d-tdee').textContent=tdee.toLocaleString()+' cal/day';
+    document.getElementById('d-target').textContent=target.toLocaleString()+' cal/day';
+    document.getElementById('d-weekly').textContent=(actualDeficit*7).toLocaleString()+' cal/week';
+    document.getElementById('warn').style.display=actualDeficit>1000?'block':'none';
+    document.getElementById('result-card').style.display='block';
+  }
+  calc();
+</script>
+</body>
+</html>
